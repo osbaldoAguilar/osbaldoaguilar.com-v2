@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>My First Parcel App</title>
+    <link rel="stylesheet" href="./assets/tabs.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="tabs">
+            <div role="tablist" aria-label="Programing Projects">
+                <button role="tab" aria-selected="true" id='js'>JavaScript</button>
+                <button role="tab" aria-selected="false" id='wp'>WordPress</button>
+                <button role="tab" aria-selected="false" id='shop'>Shopify</button>
+            </div>
+            <div role="tabpanel" aria-labelledby="js">
+                <p>JavaScript is great!</p>
+            </div>
+            <div role="tabpanel" aria-labelledby="wp" hidden>
+                <p>WordPress is great!</p>
+            </div>
+            <div role="tabpanel" aria-labelledby="shop" hidden>
+                <p>Shopify is great!</p>
+            </div>
+        </div>
+        <video class="webcam"></video>
+        <canvas class="video"></canvas>
+        <canvas class="face"></canvas>
+    </div>
+    <script src="./tabs.js"></script>
+    <!-- <script src="../testWebCam.js"></script> -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .wrap {
+            position: relative;
+            min-height: 100vh;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrap>* {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .face {
+            position: absolute;
+        }
+    </style>
+</body>
+
+</html>

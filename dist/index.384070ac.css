@@ -1,0 +1,45 @@
+:root {
+    --paradise-pink: #ef476fff;
+    --orange-yellow-crayola: #ffd166ff;
+    --caribbean-green: #06d6a0ff;
+    --blue-ncs: #118ab2ff;
+    --midnight-green-eagle-green: #073b4cff;
+}
+
+
+.tabs {
+    display: grid;
+}
+
+[role='tablist'] {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+}
+
+[role='tabpanel'] {
+    background: var(--paradise-pink);
+    padding: 2rem;
+}
+
+button {
+    background: var(--orange-yellow-crayola);
+    border: 0;
+    color: var(--midnight-green-eagle-green);
+    border-radius: 5px 5px 0 0;
+    --bs-color: rgba(0,0,0,0.1);
+    box-shadow: inset 0 -2px 5px var(--bs-color);
+    cursor: pointer;
+}
+
+button[aria-selected='true'] {
+    background-color: var(--orange-yellow-crayola);
+    box-shadow: none;
+    color: rgba(0,0,0,0.7);
+}
+
+button:focus {
+    outline: 0;
+    --bs-color: rgba(0,0,0,0.6);
+}
+/*# sourceMappingURL=index.384070ac.css.map */
