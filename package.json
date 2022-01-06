@@ -2,5 +2,8 @@
   "dependencies": {},
   "devDependencies": {
     "parcel": "^2.0.1"
+  },
+  "scripts": {
+    "build": "yarn parcel src/index.html "
   }
 }
