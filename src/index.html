@@ -5,6 +5,8 @@
     <meta charset="utf-8" />
     <title>My First Parcel App</title>
     <link rel="stylesheet" href="./assets/tabs.css">
+    <link rel="stylesheet" href="./assets/textgenerator.css">
+    <link rel="stylesheet" href="./assets/modal.css">
 </head>
 
 <body>
@@ -12,12 +14,59 @@
 
         <div class="tabs">
             <div role="tablist" aria-label="Programing Projects">
-                <button role="tab" aria-selected="true" id='js'>JavaScript</button>
-                <button role="tab" aria-selected="false" id='wp'>WordPress</button>
-                <button role="tab" aria-selected="false" id='shop'>Shopify</button>
+                <button class="tabBtn" role="tab" aria-selected="true" id='js'>JavaScript</button>
+                <button class="tabBtn" role="tab" aria-selected="false" id='wp'>WordPress</button>
+                <button class="tabBtn" role="tab" aria-selected="false" id='shop'>Shopify</button>
+                <button class="tabBtn" role="tab" aria-selected="false" id='dev'>In Development</button>
             </div>
             <div role="tabpanel" aria-labelledby="js">
-                <p>JavaScript is great!</p>
+                <button id="textGen">Open Text Generator</button>
+                <button id="shopList">Open Shopping List</button>
+                <div class="modal" id="shopModal">
+                    <div class="modal-content">
+                        <div class="wrapper">
+                            <div class="shopping-list">
+                                <form class="shopping" autocomplete="off">
+                                    <input type="text" name="item" id="item">
+                                    <button type="submit">+ Add Item</button>
+                                </form>
+                                <h1>Shopping List</h1>
+                                <ul class="list">
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal" id='textModal'>
+                    <div class="modal-content">
+                        <div class="wrapper">
+                            <span class="close">&times</span>
+                            <div class="typer">
+                                <label for="sarcastic">
+                                    <input type="radio" value="sarcastic" name="filter" id="sarcastic" checked>
+                                    Sarcastic (SpongeBobCase)
+                                </label>
+                                <label for="funky" id="funky">
+                                    <input type="radio" value="funky" id="funky" name="filter">
+                                    Funky
+                                </label>
+                                <label for="unable" id="unable">
+                                    <input type="radio" value="unable" id="unable" name="filter">
+                                    Unable to Structure a Sentence
+                                </label>
+                                <textarea name="text">so I was thinking about going to the store.</textarea>
+                                <p class="result"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
             </div>
             <div role="tabpanel" aria-labelledby="wp" hidden>
                 <p>WordPress is great!</p>
@@ -25,21 +74,26 @@
             <div role="tabpanel" aria-labelledby="shop" hidden>
                 <p>Shopify is great!</p>
             </div>
+            <div role="tabpanel" aria-labelledby="dev" hidden>
+                <p>Stay tuned a lot will come soon</p>
+            </div>
         </div>
         <video class="webcam"></video>
         <canvas class="video"></canvas>
         <canvas class="face"></canvas>
     </div>
     <script src="./tabs.js"></script>
-    <!-- <script src="../testWebCam.js"></script> -->
+    <script src="./textgen.js"></script>
+    <script src="./modal.js"></script>
+    <script src="./shopping.js"></script>
     <style>
-        * {
+        /* * {
             box-sizing: border-box;
         }
 
         body {
             margin: 0;
-        }
+        } */
 
         .wrap {
             position: relative;

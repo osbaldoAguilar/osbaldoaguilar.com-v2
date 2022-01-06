@@ -1,0 +1,18 @@
+.wrapper {
+    min-height: 50vh;
+    display: grid;
+    align-items: center;
+}
+
+.typer {
+    margin: 0 auto;
+    background: var(--caribbean-green);
+    width: 500px;
+    padding: 2rem;
+    border-radius: 3px;
+    display: grid;
+}
+
+textarea {
+    width: 100%;
+}
